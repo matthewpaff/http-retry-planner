@@ -1,0 +1,1 @@
+{"description": "reject zero-based attempt numbers", "expected_error": true, "id": "retries-0000", "input": {"attempt": 0, "method": "GET", "status": 503}}
