@@ -37,3 +37,4 @@
 {"description": "reject zero-based attempt numbers", "expected_error": true, "id": "retries-0036", "input": {"attempt": 0, "method": "GET", "status": 503}}
 {"description": "reject negative retry-after intervals", "expected_error": true, "id": "retries-0037", "input": {"method": "GET", "retry_after": -1, "status": 503}}
 {"description": "reject lowercase request methods", "expected_error": true, "id": "retries-0038", "input": {"method": "get", "status": 503}}
+{"description": "reject boolean attempt limits", "expected_error": true, "id": "retries-0039", "input": {"max_attempts": true, "method": "GET", "status": 503}}
