@@ -54,3 +54,4 @@
 {"description": "stop retrying successful responses", "expected": {"delay_seconds": null, "reason": "non_retryable_status", "retry": false}, "id": "retries-0053", "input": {"method": "GET", "status": 200}}
 {"description": "require explicit idempotence for POST retries", "expected": {"delay_seconds": null, "reason": "unsafe_method", "retry": false}, "id": "retries-0054", "input": {"method": "POST", "status": 503}}
 {"description": "stop when the final attempt has been used", "expected": {"delay_seconds": null, "reason": "attempt_limit", "retry": false}, "id": "retries-0055", "input": {"attempt": 4, "max_attempts": 4, "method": "GET", "status": 503}}
+{"description": "calculate exponential backoff for retryable failures", "expected": {"delay_seconds": 4, "reason": "retryable_failure", "retry": true}, "id": "retries-0056", "input": {"attempt": 2, "base_seconds": 2, "method": "GET", "status": 503}}
