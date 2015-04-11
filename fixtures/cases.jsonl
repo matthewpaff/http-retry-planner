@@ -108,3 +108,4 @@
 {"description": "plan a retry after a connection failure", "expected": {"delay_seconds": 2, "reason": "retryable_failure", "retry": true}, "id": "retries-0107", "input": {"attempt": 2, "method": "GET", "status": null}}
 {"description": "reject zero-based attempt numbers", "expected_error": true, "id": "retries-0108", "input": {"attempt": 0, "method": "GET", "status": 503}}
 {"description": "reject negative retry-after intervals", "expected_error": true, "id": "retries-0109", "input": {"method": "GET", "retry_after": -1, "status": 503}}
+{"description": "reject lowercase request methods", "expected_error": true, "id": "retries-0110", "input": {"method": "get", "status": 503}}
