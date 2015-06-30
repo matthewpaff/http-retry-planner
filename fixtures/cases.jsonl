@@ -406,3 +406,4 @@
 {"description": "allow caller-declared idempotent POST requests", "expected": {"delay_seconds": 2, "reason": "retryable_failure", "retry": true}, "id": "retries-0405", "input": {"base_seconds": 2, "idempotent": true, "method": "POST", "status": 503}}
 {"description": "honor retry-after minima above the backoff cap", "expected": {"delay_seconds": 120, "reason": "retryable_failure", "retry": true}, "id": "retries-0406", "input": {"cap_seconds": 60, "method": "GET", "retry_after": 120, "status": 429}}
 {"description": "plan a retry after a connection failure", "expected": {"delay_seconds": 2, "reason": "retryable_failure", "retry": true}, "id": "retries-0407", "input": {"attempt": 2, "method": "GET", "status": null}}
+{"description": "reject zero-based attempt numbers", "expected_error": true, "id": "retries-0408", "input": {"attempt": 0, "method": "GET", "status": 503}}
