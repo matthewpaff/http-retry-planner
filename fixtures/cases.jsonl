@@ -244,3 +244,4 @@
 {"description": "reject boolean attempt limits", "expected_error": true, "id": "retries-0243", "input": {"max_attempts": true, "method": "GET", "status": 503}}
 {"description": "reject out-of-range response statuses", "expected_error": true, "id": "retries-0244", "input": {"method": "GET", "status": 999}}
 {"description": "stop retrying successful responses", "expected": {"delay_seconds": null, "reason": "non_retryable_status", "retry": false}, "id": "retries-0245", "input": {"method": "GET", "status": 200}}
+{"description": "require explicit idempotence for POST retries", "expected": {"delay_seconds": null, "reason": "unsafe_method", "retry": false}, "id": "retries-0246", "input": {"method": "POST", "status": 503}}
