@@ -254,3 +254,4 @@
 {"description": "reject negative retry-after intervals", "expected_error": true, "id": "retries-0253", "input": {"method": "GET", "retry_after": -1, "status": 503}}
 {"description": "reject lowercase request methods", "expected_error": true, "id": "retries-0254", "input": {"method": "get", "status": 503}}
 {"description": "reject boolean attempt limits", "expected_error": true, "id": "retries-0255", "input": {"max_attempts": true, "method": "GET", "status": 503}}
+{"description": "reject out-of-range response statuses", "expected_error": true, "id": "retries-0256", "input": {"method": "GET", "status": 999}}
